@@ -1,0 +1,4 @@
+runtime: nodejs
+env: flex
+env_variables:
+  SPARKPOST_API_KEY: your-sparkpost-api-key
