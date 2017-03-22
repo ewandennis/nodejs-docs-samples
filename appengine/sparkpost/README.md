@@ -1,0 +1,13 @@
+# Express.js + SparkPost on Google App Engine
+
+> [SparkPost][sparkpost]—Email delivery services built for developers, by developers.
+>
+> – sparkpost.com
+
+This sample app demonstrates how to send email with Express.js and [node-sparkpost](https://github.com/sparkPost/node-sparkpost) on Google App Engine.
+
+Read the [SparkPost on Google App Engine](sparkpost-node-tutorial) tutorial to learn how to run and deploy this app.
+
+You can also [read the SparkPost documentation](https://developers.sparkpost.com/api/).
+
+[sparkpost-node-tutorial][tbd]

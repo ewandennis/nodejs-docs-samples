@@ -1,0 +1,19 @@
+{
+  "name": "appengine-sparkpost",
+  "version": "0.0.1",
+  "description": "An example of using SparkPost in Node.js on Google App Engine.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "author": "Message Systems, Inc.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "pug": "^0.1.0",
+    "sparkpost": "^2.1.2"
+  }
+}
