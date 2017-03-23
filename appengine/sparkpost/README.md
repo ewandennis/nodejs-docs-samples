@@ -10,5 +10,12 @@ Read the [SparkPost on Google App Engine](sparkpost-node-tutorial) tutorial to l
 
 You can also [read the SparkPost documentation](https://developers.sparkpost.com/api/).
 
+### Running Tests
+
+```sh
+npm install --dev
+npm test
+```
+
 [sparkpost]: https://www.sparkpost.com/
 [sparkpost-node-tutorial]: tbd
