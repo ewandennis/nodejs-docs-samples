@@ -1,5 +1,6 @@
 'use strict';
 
+const http = require('http');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -8,6 +9,7 @@ const SparkPost = require('sparkpost');
 const spClient = new SparkPost(process.env.SPARKPOST_API_KEY);
 
 const app = express();
+const srv = http.Server(app);
 
 // Setup view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -19,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => res.render('index'));
 
-app.post('/hello', (req, res, next) => {
+app.post('/send', (req, res, next) => {
   spClient.transmissions.send({
     options: { sandbox: true },
     content: {
@@ -38,5 +40,9 @@ app.post('/hello', (req, res, next) => {
   });
 });
 
-app.listen(process.env.PORT || 8080);
+srv.listen(process.env.PORT || 8080, () => {
+  console.log(`Listening on ${srv.address().port}`);
+});
+
+module.exports = app;
 

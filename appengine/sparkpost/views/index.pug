@@ -16,6 +16,6 @@ html
               strong=e.message+': '
               |#{e.description}
     else
-      form(name="hello", action="/hello", method="post")
+      form(name="hello", action="/send", method="post")
         input(type="email", placeholder="enter your email to send yourself a hello world message", name="email", style="width: 50%; margin-right: 15px;")
         input(type="submit", value="send")
